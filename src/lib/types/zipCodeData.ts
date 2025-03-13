@@ -5,6 +5,5 @@ export interface ZipCodeData {
   zipCode: string;
   state: string;
   chapter: string;
-  chapterId: string;
   sellerNo: string;
 }

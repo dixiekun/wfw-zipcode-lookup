@@ -79,9 +79,7 @@
         // Check if other fields start with the search term
         else if (
           item.state.toLowerCase().startsWith(searchTerm) ||
-          item.chapter.toLowerCase().startsWith(searchTerm) ||
-          item.chapterId.toLowerCase().startsWith(searchTerm) ||
-          item.sellerNo.toLowerCase().startsWith(searchTerm)
+          item.chapter.toLowerCase().startsWith(searchTerm)
         ) {
           otherStartMatches.push(item);
         }
@@ -89,9 +87,7 @@
         else if (
           item.zipCode.toLowerCase().includes(searchTerm) ||
           item.state.toLowerCase().includes(searchTerm) ||
-          item.chapter.toLowerCase().includes(searchTerm) ||
-          item.chapterId.toLowerCase().includes(searchTerm) ||
-          item.sellerNo.toLowerCase().includes(searchTerm)
+          item.chapter.toLowerCase().includes(searchTerm)
         ) {
           otherPartialMatches.push(item);
         }
@@ -144,7 +140,7 @@
   
   <div class="mb-6">
     <label for="zipcode" class="block text-sm font-medium text-gray-700 mb-2">
-      Search by Zip, State, Chapter, Chapter ID, or Seller No
+      Search by Zip, State, or Chapter
     </label>
     <div class="flex flex-col sm:flex-row gap-2">
       <input
@@ -192,7 +188,6 @@
             <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
               <div class="w-full sm:max-w-[150px] md:max-w-[200px] lg:max-w-none">Chapter</div>
             </th>
-            <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Chapter ID</th>
             <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Seller No</th>
           </tr>
         </thead>
@@ -204,7 +199,6 @@
               <td class="px-4 py-3 text-sm text-gray-600">
                 <div class="w-full sm:max-w-[150px] md:max-w-[200px] lg:max-w-none break-words">{item.chapter}</div>
               </td>
-              <td class="px-4 py-3 text-sm text-gray-600">{item.chapterId}</td>
               <td class="px-4 py-3 text-sm text-gray-600">{item.sellerNo}</td>
             </tr>
           {/each}
