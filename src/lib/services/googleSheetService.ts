@@ -24,7 +24,7 @@ export async function fetchZipCodeData(): Promise<ZipCodeData[]> {
         zipCode: row[0]?.trim() || '',
         state: row[1]?.trim() || '',
         chapter: row[2]?.trim() || '',
-        sellerNo: row[3]?.trim() || ''
+        sellerNo: row[4]?.trim() || ''
       };
     });
   } catch (error) {
